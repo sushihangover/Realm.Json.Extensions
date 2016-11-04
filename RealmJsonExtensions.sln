@@ -1,0 +1,79 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealmJson.Test.Droid", "RealmJson.Test.Droid\RealmJson.Test.Droid.csproj", "{AA082691-B917-4BF9-BCCE-B5F9AA2AABF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealmJson.Extensions", "RealmJson.Extensions\RealmJson.Extensions.csproj", "{CF4DC39D-4830-411B-97D2-D16076FDE2A3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestData", "TestData", "{FFDD69E8-D62C-4558-9989-64C594652D74}"
+	ProjectSection(SolutionItems) = preProject
+		TestData\States.json = TestData\States.json
+	EndProjectSection
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "RealmJson.Shared.Tests", "RealmJson.Shared.Tests\RealmJson.Shared.Tests.shproj", "{D9066F67-201C-48A9-BE53-39A8333E0B58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealmJson.Test.iOS", "RealmJson.Test.iOS\RealmJson.Test.iOS.csproj", "{6B490442-5354-4A8E-9066-1AD030BF18DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{107F0B2C-9E27-4B12-B9D4-65DA834DF134}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		Perf.md = Perf.md
+		media\RealmJson.Extensions.md = media\RealmJson.Extensions.md
+		media\icon.png = media\icon.png
+		media\SushiHangover.RealmJson.png = media\SushiHangover.RealmJson.png
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+		RealmJson.Extensions\RealmJson.Extensions.nuspec = RealmJson.Extensions\RealmJson.Extensions.nuspec
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA082691-B917-4BF9-BCCE-B5F9AA2AABF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA082691-B917-4BF9-BCCE-B5F9AA2AABF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA082691-B917-4BF9-BCCE-B5F9AA2AABF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA082691-B917-4BF9-BCCE-B5F9AA2AABF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA082691-B917-4BF9-BCCE-B5F9AA2AABF5}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{AA082691-B917-4BF9-BCCE-B5F9AA2AABF5}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{AA082691-B917-4BF9-BCCE-B5F9AA2AABF5}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{AA082691-B917-4BF9-BCCE-B5F9AA2AABF5}.Release|iPhone.Build.0 = Release|Any CPU
+		{AA082691-B917-4BF9-BCCE-B5F9AA2AABF5}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{AA082691-B917-4BF9-BCCE-B5F9AA2AABF5}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{AA082691-B917-4BF9-BCCE-B5F9AA2AABF5}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{AA082691-B917-4BF9-BCCE-B5F9AA2AABF5}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{CF4DC39D-4830-411B-97D2-D16076FDE2A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF4DC39D-4830-411B-97D2-D16076FDE2A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF4DC39D-4830-411B-97D2-D16076FDE2A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF4DC39D-4830-411B-97D2-D16076FDE2A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF4DC39D-4830-411B-97D2-D16076FDE2A3}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{CF4DC39D-4830-411B-97D2-D16076FDE2A3}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{CF4DC39D-4830-411B-97D2-D16076FDE2A3}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{CF4DC39D-4830-411B-97D2-D16076FDE2A3}.Release|iPhone.Build.0 = Release|Any CPU
+		{CF4DC39D-4830-411B-97D2-D16076FDE2A3}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{CF4DC39D-4830-411B-97D2-D16076FDE2A3}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{CF4DC39D-4830-411B-97D2-D16076FDE2A3}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{CF4DC39D-4830-411B-97D2-D16076FDE2A3}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{6B490442-5354-4A8E-9066-1AD030BF18DE}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{6B490442-5354-4A8E-9066-1AD030BF18DE}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{6B490442-5354-4A8E-9066-1AD030BF18DE}.Release|Any CPU.ActiveCfg = Release|iPhone
+		{6B490442-5354-4A8E-9066-1AD030BF18DE}.Release|Any CPU.Build.0 = Release|iPhone
+		{6B490442-5354-4A8E-9066-1AD030BF18DE}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{6B490442-5354-4A8E-9066-1AD030BF18DE}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{6B490442-5354-4A8E-9066-1AD030BF18DE}.Release|iPhone.ActiveCfg = Release|iPhone
+		{6B490442-5354-4A8E-9066-1AD030BF18DE}.Release|iPhone.Build.0 = Release|iPhone
+		{6B490442-5354-4A8E-9066-1AD030BF18DE}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{6B490442-5354-4A8E-9066-1AD030BF18DE}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{6B490442-5354-4A8E-9066-1AD030BF18DE}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{6B490442-5354-4A8E-9066-1AD030BF18DE}.Debug|iPhone.Build.0 = Debug|iPhone
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		description = Extension Methods for adding JSON APIs to a Realm Instance
+		version = 1.0.1
+	EndGlobalSection
+EndGlobal
