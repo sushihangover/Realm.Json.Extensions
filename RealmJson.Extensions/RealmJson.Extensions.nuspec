@@ -6,11 +6,17 @@
     <description>
       Extension Methods for adding JSON APIs to a Realm Instance
     </description>
+    <title>SushiHangover.RealmJson.Extensions</title>
     <language>en-US</language>
+    <copyright>2016 - SushiHangover/RobertN</copyright>
     <authors>SushiHangover/RobertN</authors>
     <projectUrl>https://github.com/sushihangover/Realm.Json.Extensions</projectUrl>
-    <iconUrl>https://github.com/sushihangover/Realm.Json.Extensions/blob/media/icon.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/sushihangover/Realm.Json.Extensions/master/media/icon.png</iconUrl>
+    <licenseUrl>https://github.com/sushihangover/Realm.Json.Extensions</licenseUrl>
     <tags>Realm Xamarin Json Netwonsoft SushiHangover</tags>
+  <dependencies>
+     <dependency id="Realm" version="0.78.1" />
+ </dependencies>
   </metadata>
   <files>
     <file src="bin/Release/RealmJson.Extensions.dll" target="lib" />

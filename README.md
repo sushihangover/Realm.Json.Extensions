@@ -8,7 +8,7 @@
 
 | Git Branch | Xamarin.Android | Xamarin.iOS |
 | :------ | :------: | :------: | :------: |
-| **master** | ![](media/passing.svg) | ![](media/passing.svg) |
+| **master** | ![](https://raw.githubusercontent.com/sushihangover/Realm.Json.Extensions/master/media/passing.svg) | ![](https://raw.githubusercontent.com/sushihangover/Realm.Json.Extensions/master/media/passing.svg) |
 
 * The CI builds are generously hosted and run on ~~~
 
@@ -19,6 +19,10 @@
 ###Xamarin Realm v0.80.1
 
 ##Nuget
+
+`PM> Install-Package RealmJson.Extensions`
+
+Ref: [https://www.nuget.org/packages/RealmJson.Extensions](https://www.nuget.org/packages/RealmJson.Extensions)
 
 ##Issues
 
