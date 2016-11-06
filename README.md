@@ -19,7 +19,7 @@
 
 * Package Version `1.1.0`
 
-	* Due to the changes in `Manage`, it is now faster to create/update `RealmObject`s when dealing with under 1k records then using `AutoMapper`, see [Perf.md](https://raw.githubusercontent.com/sushihangover/Realm.Json.Extensions/master/Perf.md) for details.
+	* Due to the changes in `Manage`, it is now faster to create/update `RealmObject`s when dealing with under 1k records then using `AutoMapper`, see [Perf.md](https://github.com/sushihangover/Realm.Json.Extensions/blob/master/Perf.md) for details.
 	* Replaced `AutoMapper` w/ `Manage` except for:
 	* Added `CreateAllFromJsonViaAutoMapper`
 
