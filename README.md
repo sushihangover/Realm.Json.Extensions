@@ -4,7 +4,7 @@
 
 ####Extension Methods for adding JSON APIs to a Realm Instance 
 
-##Current project status
+##Current project status:
 
 | Git Branch | Xamarin.Android | Xamarin.iOS | Xamarin.Forms[<sup>(1)</sup>](#1xamarinforms-usage)
 | :------ | :------: | :------: | :------: |
@@ -12,7 +12,7 @@
 
 <!--* The CI builds are generously hosted and run on ~~~
 -->
-##[Realm](https://realm.io/docs/xamarin/latest/) Versions
+##[Realm](https://realm.io/docs/xamarin/latest/) Versions:
 
 
 ###Xamarin Realm v0.80.0
@@ -30,7 +30,7 @@
 	* Uses `AutoMapper` to auto-assign the Json derived object properies to the RealmObject
 	* Initial Public Release
 
-##Nuget
+##Nuget:
 
 `PM> Install-Package RealmJson.Extensions`
 
@@ -40,12 +40,12 @@ Ref: [https://www.nuget.org/packages/RealmJson.Extensions](https://www.nuget.org
 
 ###Post issues on [GitHub](https://github.com/sushihangover/Realm.Json.Extensions/issues)
 
-##Need Help
+##Need Help?
 
 Post on [StackOverflow](http://stackoverflow.com/questions/tagged/xamarin+realm) with the tags: **`[XAMARIN]`** **`[REALM]`** **`[JSON]`**
 
 
-##Extension API
+##Extension API:
 
 * A Realm Instance:
 	* .CreateAllFromJson\<T\>(string)
@@ -56,6 +56,42 @@ Post on [StackOverflow](http://stackoverflow.com/questions/tagged/xamarin+realm)
 	* .CreateOrUpdateObjectFromJson\<T\>(string)
  	* .CreateOrUpdateObjectFromJson\<T\>(Stream)
 
+
+##Usage / Examples:
+	
+###Single RealmObject from Json-based Strings:
+	
+	using (var theRealm = Realm.GetInstance(RealmDBTempPath()))
+	{
+		var realmObject = theRealm.CreateObjectFromJson<StateUnique>(jsonString);
+	}
+
+###Single RealmObject from a Stream:
+
+	using (var stream = new MemoryStream(byteArray))
+	using (var theRealm = Realm.GetInstance(RealmDBTempPath()))
+	{
+		var testObject = theRealm.CreateObjectFromJson<StateUnique>(stream);
+	}
+
+
+###Using Json Arrays from a Android Asset Stream:
+
+	using (var theRealm = Realm.GetInstance(RealmDBTempPath()))
+	using (var assetStream = Application.Context.Assets.Open("States.json"))
+	{
+		theRealm.CreateAllFromJson<State>(assetStream);
+	}
+
+###Using Json Arrays from a iOS Bundled Resource Stream:
+
+	using (var theRealm = Realm.GetInstance(RealmDBTempPath()))
+	using (var fileStream = new FileStream("./Data/States.json", FileMode.Open, FileAccess.Read))
+	{
+		theRealm.CreateAllFromJson<State>(fileStream);
+	}
+
+**Note:** Consult the Unit Tests for more usage details
 
 ### <sup>(1)</sup>`Xamarin.Forms` Usage
 
@@ -72,44 +108,7 @@ Note: Once Xamarin has full support for `.NET Standard` and AutoMapper releases 
 
 <sup>(3)</sup> https://github.com/AutoMapper/AutoMapper/issues/1532
 
-
-##Usage / Examples
-	
-###Single RealmObjects from Json-based Strings:
-	
-	using (var theRealm = Realm.GetInstance(RealmDBTempPath()))
-	{
-		var realmObject = theRealm.CreateObjectFromJson<StateUnique>(jsonString);
-	}
-
-###Single RealmObjects from a Stream:
-
-	using (var stream = new MemoryStream(byteArray))
-	using (var theRealm = Realm.GetInstance(RealmDBTempPath()))
-	{
-		var testObject = theRealm.CreateObjectFromJson<StateUnique>(stream);
-	}
-
-
-###Json Arrays from a Android Asset Stream:
-
-	using (var theRealm = Realm.GetInstance(RealmDBTempPath()))
-	using (var assetStream = Application.Context.Assets.Open("States.json"))
-	{
-		theRealm.CreateAllFromJson<State>(assetStream);
-	}
-
-###Json Arrays iOS Bundled Resource Stream:
-
-	using (var theRealm = Realm.GetInstance(RealmDBTempPath()))
-	using (var fileStream = new FileStream("./Data/States.json", FileMode.Open, FileAccess.Read))
-	{
-		theRealm.CreateAllFromJson<State>(fileStream);
-	}
-
-**Note:** Consult the Unit Tests for more usage details
-
-##Building
+##Building:
 
 ###`xbuild` or `msbuild` based:
 
@@ -117,7 +116,7 @@ Note: Once Xamarin has full support for `.NET Standard` and AutoMapper releases 
 	xbuild /p:SolutionDir=./ /target:Build /p:Configuration=Release RealmJson.Extensions/RealmJson.Extensions.csproj
 
 
-##Testing / NUnitLite Automatation
+##Testing / NUnitLite Automatation:
 
 ###`Xamarin.Android`
 
@@ -138,7 +137,16 @@ Ref: [Issue 32005](https://bugzilla.xamarin.com/show_bug.cgi?id=32005)
 	xcrun simctl launch booted com.sushihangover.realmjson-test-ios
 	cat ~/Library/Logs/CoreSimulator/360D3BC6-4A6D-4B7E-A899-5C7651EC2107/system.log
 
-##Performance Testing
+##Performance Testing:
+
+There is a `#if PERF` within `Tests.Shared.Perf.Streaming.cs` that contains multple tests to evaluate streaming performance and memory overhead. 
+
+These test methods **try** to evaluate:
+
+1. `Realm.Manage` vs. `AutoMapper` performance/effeciency
+1. Upper limits of the number of `RealmObject`s can be used in a Realm `Transaction` on a mobile device.
+
+See [Perf.md](https://github.com/sushihangover/Realm.Json.Extensions/blob/master/Perf.md) for details.
 
 ##License
 
