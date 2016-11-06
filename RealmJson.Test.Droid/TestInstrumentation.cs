@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Reflection;
-
 using Android.App;
-using Android.Content;
 using Android.Runtime;
-
 using Xamarin.Android.NUnitLite;
-using Android.Util;
 
 namespace RealmJson.Test.Droid
 {

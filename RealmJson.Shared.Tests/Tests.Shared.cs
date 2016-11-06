@@ -1,26 +1,53 @@
 ﻿using System;
 using System.IO;
-using System.Text;
-using System.Collections.Concurrent;
-using NUnit.Framework;
-using RealmJson.Extensions;
-using Realms;
-using System.Threading.Tasks;
-using System.Threading;
-#if __ANDROID__
-using Android.App;
 using System.Linq;
-using Java.Security;
-using Android.Util;
-#endif
-#if __IOS__
-#endif
+using System.Text;
+using NUnit.Framework;
+using Realms;
+using SushiHangover.RealmJson;
 
 namespace RealmJson.Test
 {
 	[TestFixture]
 	public partial class Tests
 	{
+		const string jsonStringSingleState = @"
+{
+    ""name"": ""Alabama"",
+    ""abbreviation"": ""AL""
+}
+";
+
+		const string jsonStringTwoState = @"
+[
+    {
+        ""name"": ""Alabama"",
+        ""abbreviation"": ""AL""
+    },
+{
+        ""name"": ""Wyoming"",
+        ""abbreviation"": ""WY""
+    }
+]
+";
+
+		const string jsonStringThreeState = @"
+[
+    {
+        ""name"": ""Alabama"",
+        ""abbreviation"": ""AL""
+    },
+    {
+        ""name"": ""Oklahoma"",
+        ""abbreviation"": ""OK""
+    },
+    {
+        ""name"": ""Wyoming"",
+        ""abbreviation"": ""WY""
+    }
+]
+";
+
 		public void DeleteRealmDB(string realmDBFullPath)
 		{
 			if (File.Exists(realmDBFullPath))
@@ -44,45 +71,55 @@ namespace RealmJson.Test
 		{
 		}
 
-		public void Log(string text)
-		{
-#if __ANDROID__
-			Android.Util.Log.Debug("REALM", text);
-#endif
-
-#if __IOS__
-			Console.WriteLine("[REALM] " + text);
-#endif
-		}
-
-#if false
+#if !PERF
 
 		[Test]
 		public void CreateObjectFromJson_String()
 		{
-			var jsonString = @"
-{
-    ""name"": ""Alabama"",
-    ""abbreviation"": ""AL""
-}
-";
 			using (var theRealm = Realm.GetInstance(RealmDBTempPath()))
 			{
-				var testObject = theRealm.CreateObjectFromJson<StateUnique>(jsonString);
+				var testObject = theRealm.CreateObjectFromJson<StateUnique>(jsonStringSingleState);
 				Assert.IsTrue(testObject.abbreviation == "AL" & testObject.name == "Alabama");
+			}
+		}
+
+		[Test]
+		public void CreateObjectFromJson_InTransaction_Stream()
+		{
+			byte[] byteArray = Encoding.UTF8.GetBytes(jsonStringSingleState);
+			using (var stream = new MemoryStream(byteArray))
+			using (var theRealm = Realm.GetInstance(RealmDBTempPath()))
+			{
+				StateUnique testObject;
+				using (var transaction = theRealm.BeginWrite())
+				{
+					testObject = theRealm.CreateObjectFromJson<StateUnique>(stream, inTransaction: true);
+					transaction.Commit();
+				}
+				Assert.IsTrue(testObject.abbreviation == "AL" & testObject.name == "Alabama");
+			}
+		}
+
+		[Test]
+		public void CreateObjectFromJson_InTransaction_RollBack_Stream()
+		{
+			byte[] byteArray = Encoding.UTF8.GetBytes(jsonStringSingleState);
+			using (var stream = new MemoryStream(byteArray))
+			using (var theRealm = Realm.GetInstance(RealmDBTempPath()))
+			{
+				using (var transaction = theRealm.BeginWrite())
+				{
+					theRealm.CreateObjectFromJson<StateUnique>(stream, inTransaction: true);
+					transaction.Rollback();
+				}
+				Assert.IsTrue(theRealm.ObjectForPrimaryKey<StateUnique>("AL") == null);
 			}
 		}
 
 		[Test]
 		public void CreateObjectFromJson_Stream()
 		{
-			var jsonString = @"
-{
-    ""name"": ""Alabama"",
-    ""abbreviation"": ""AL""
-}
-";
-			byte[] byteArray = Encoding.UTF8.GetBytes(jsonString);
+			byte[] byteArray = Encoding.UTF8.GetBytes(jsonStringSingleState);
 			using (var stream = new MemoryStream(byteArray))
 			using (var theRealm = Realm.GetInstance(RealmDBTempPath()))
 			{
@@ -91,25 +128,8 @@ namespace RealmJson.Test
 			}
 		}
 
-
-		public string CreateTestDBFromJson()
+		public string CreateTestDBFromJson(string jsonString)
 		{
-			var jsonString = @"
-[
-    {
-        ""name"": ""Alabama"",
-        ""abbreviation"": ""AL""
-    },
-    {
-        ""name"": ""Oklahoma"",
-        ""abbreviation"": ""OK""
-    },
-    {
-        ""name"": ""Wyoming"",
-        ""abbreviation"": ""WY""
-    }
-]
-";
 			var dbFile = RealmDBTempPath();
 			using (var theRealm = Realm.GetInstance(dbFile))
 			{
@@ -126,7 +146,7 @@ namespace RealmJson.Test
 				    ""name"": ""NEW"",
 				    ""abbreviation"": ""NW""
 				}";
-			var dbFile = CreateTestDBFromJson();
+			var dbFile = CreateTestDBFromJson(jsonStringTwoState);
 
 			using (var theRealm = Realm.GetInstance(dbFile))
 			{
@@ -144,7 +164,7 @@ namespace RealmJson.Test
 				    ""abbreviation"": ""OK""
 				}";
 
-			var dbFile = CreateTestDBFromJson();
+			var dbFile = CreateTestDBFromJson(jsonStringThreeState);
 
 			using (var theRealm = Realm.GetInstance(dbFile))
 			{
@@ -156,25 +176,9 @@ namespace RealmJson.Test
 		[Test]
 		public void CreateAllFromJson_String()
 		{
-			var jsonString = @"
-[
-    {
-        ""name"": ""Alabama"",
-        ""abbreviation"": ""AL""
-    },
-    {
-        ""name"": ""Oklahoma"",
-        ""abbreviation"": ""OK""
-    },
-    {
-        ""name"": ""Wyoming"",
-        ""abbreviation"": ""WY""
-    }
-]
-";
 			using (var theRealm = Realm.GetInstance(RealmDBTempPath()))
 			{
-				theRealm.CreateAllFromJson<StateUnique>(jsonString);
+				theRealm.CreateAllFromJson<StateUnique>(jsonStringThreeState);
 				Assert.AreEqual(3, theRealm.All<StateUnique>().Count());
 			}
 		}
@@ -182,19 +186,7 @@ namespace RealmJson.Test
 		[Test]
 		public void CreateAllFromJson_Stream()
 		{
-			var jsonString = @"
-[
-    {
-        ""name"": ""Alabama"",
-        ""abbreviation"": ""AL""
-    },
-{
-        ""name"": ""Wyoming"",
-        ""abbreviation"": ""WY""
-    }
-]
-";
-			byte[] byteArray = Encoding.UTF8.GetBytes(jsonString);
+			byte[] byteArray = Encoding.UTF8.GetBytes(jsonStringTwoState);
 			using (var stream = new MemoryStream(byteArray))
 			using (var theRealm = Realm.GetInstance(RealmDBTempPath()))
 			{
@@ -202,53 +194,80 @@ namespace RealmJson.Test
 				Assert.AreEqual(2, theRealm.All<StateUnique>().Count());
 
 				// Did the records get created properly from the steam?
-				Assert.IsTrue(theRealm.All<StateUnique>().Where((State s) => s.abbreviation == "AL").Any());
+				Assert.IsTrue(theRealm.All<StateUnique>().Where((StateUnique s) => s.abbreviation == "AL").Any());
 				Assert.IsTrue(theRealm.All<StateUnique>().Last().abbreviation == "WY");
 			}
 		}
 
-		//[Test]
-		//public void CreateAllFromJson_InvalidStream()
-		//{
-		//	var jsonString = @"";
-		//	byte[] byteArray = Encoding.UTF8.GetBytes(jsonString);
-		//	using (var stream = new MemoryStream(byteArray))
-		//	using (var theRealm = Realm.GetInstance(RealmDBTempPath()))
-		//	{
-		//		var ex = Assert.Throws<Newtonsoft.Json.JsonSerializationException>(() => theRealm.CreateAllFromJson<StateUnique>(stream));
-		//		Assert.That(ex, Is.EqualTo(new Newtonsoft.Json.JsonSerializationException()));
-		//	}
-		//}
-
-#if __ANDROID__
-
 		[Test]
-		public void CreateAllFromJson_From_AndroidAssetStream()
+		public void CreateAllFromJsonViaAutoMapperFromJson__NewRecords_Stream()
 		{
+			byte[] byteArray = Encoding.UTF8.GetBytes(jsonStringTwoState);
+			using (var stream = new MemoryStream(byteArray))
 			using (var theRealm = Realm.GetInstance(RealmDBTempPath()))
-			using (var assetStream = Application.Context.Assets.Open("States.json"))
 			{
-				theRealm.CreateAllFromJson<StateUnique>(assetStream);
-				Assert.AreEqual(59, theRealm.All<StateUnique>().Count());
+				theRealm.CreateAllFromJsonViaAutoMapper<StateUnique>(stream);
+				Assert.AreEqual(2, theRealm.All<StateUnique>().Count());
+
+				// Did the records get AutoMapped properly from the steam?
+				Assert.IsTrue(theRealm.All<StateUnique>().Where((StateUnique s) => s.abbreviation == "AL").Any());
+				Assert.IsTrue(theRealm.All<StateUnique>().Last().abbreviation == "WY");
 			}
 		}
 
-#endif
-
-#if __IOS__
-
 		[Test]
-		public void CreateAllFromJson_iOSBundleResourceStream()
+		public void CreateAllFromJsonViaAutoMapperFromJson__UpdateRecords_Stream()
 		{
-			using (var theRealm = Realm.GetInstance(RealmDBTempPath()))
-			using (var fileStream = new FileStream("./Data/States.json", FileMode.Open, FileAccess.Read))
+			var dbFile = CreateTestDBFromJson(jsonStringTwoState);
+			byte[] byteArray = Encoding.UTF8.GetBytes(jsonStringThreeState);
+			using (var stream = new MemoryStream(byteArray))
+			using (var theRealm = Realm.GetInstance(dbFile))
 			{
-				theRealm.CreateAllFromJson<StateUnique>(fileStream);
-				Assert.AreEqual(59, theRealm.All<StateUnique>().Count());
+				Assert.AreEqual(2, theRealm.All<StateUnique>().Count());
+				theRealm.CreateAllFromJsonViaAutoMapper<StateUnique>(stream);
+				Assert.AreEqual(3, theRealm.All<StateUnique>().Count());
+
+				// Did the "new" record get AutoMapped properly from the steam?
+				Assert.IsTrue(theRealm.All<StateUnique>().Where((StateUnique s) => s.abbreviation == "OK").Any());
 			}
 		}
 
-#endif
+		[Test]
+		public void CreateAllFromJsonViaAutoMapperFromJson__UpdateRecords__InTrans_Stream()
+		{
+			var dbFile = CreateTestDBFromJson(jsonStringTwoState);
+			byte[] byteArray = Encoding.UTF8.GetBytes(jsonStringThreeState);
+			using (var stream = new MemoryStream(byteArray))
+			using (var theRealm = Realm.GetInstance(dbFile))
+			{
+				Assert.AreEqual(2, theRealm.All<StateUnique>().Count());
+				using (var transaction = theRealm.BeginWrite())
+				{
+					theRealm.CreateAllFromJsonViaAutoMapper<StateUnique>(stream, true);
+					transaction.Commit();
+				}
+				Assert.AreEqual(3, theRealm.All<StateUnique>().Count());
+				// Did the "new" record get AutoMapped properly from the steam?
+				Assert.IsTrue(theRealm.All<StateUnique>().Where((StateUnique s) => s.abbreviation == "OK").Any());
+			}
+		}
+
+		[Test]
+		public void CreateAllFromJson_InvalidStream()
+		{
+			var jsonStringInvalid = @"";
+			byte[] byteArray = Encoding.UTF8.GetBytes(jsonStringInvalid);
+			using (var stream = new MemoryStream(byteArray))
+			using (var theRealm = Realm.GetInstance(RealmDBTempPath()))
+			{
+				Assert.That(() => theRealm.CreateAllFromJson<StateUnique>(stream),
+					Throws.Exception
+						.TypeOf<Exception>()
+						.With.Property("Message")
+						.EqualTo(RealmDoesJson.ExMalFormeJsonMessage)
+	           );
+			}
+		}
 
 #endif
 

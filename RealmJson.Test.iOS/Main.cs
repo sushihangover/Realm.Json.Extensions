@@ -1,9 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-
-using Foundation;
-using UIKit;
+﻿using UIKit;
 
 namespace RealmJson.Test.iOS
 {

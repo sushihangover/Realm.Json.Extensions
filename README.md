@@ -6,17 +6,29 @@
 
 ##Current project status
 
-| Git Branch | Xamarin.Android | Xamarin.iOS |
+| Git Branch | Xamarin.Android | Xamarin.iOS | Xamarin.Forms<sup>(1)</sup>
 | :------ | :------: | :------: | :------: |
-| **master** | ![](https://raw.githubusercontent.com/sushihangover/Realm.Json.Extensions/master/media/passing.svg) | ![](https://raw.githubusercontent.com/sushihangover/Realm.Json.Extensions/master/media/passing.svg) |
+| **master** | ![](media/passing.png) | ![](media/passing.png) | ![](media/passing.png) |
 
-* The CI builds are generously hosted and run on ~~~
-
+<!--* The CI builds are generously hosted and run on ~~~
+-->
 ##[Realm](https://realm.io/docs/xamarin/latest/) Versions
+
+
+###Xamarin Realm v0.80.0
+
+* Package Version `1.1.0`
+
+	* Due to the changes in `Manage`, it is now faster to create/update `RealmObject`s when dealing with under 1k records then using `AutoMapper`, see [Perf.md](https://raw.githubusercontent.com/sushihangover/Realm.Json.Extensions/master/Perf.md) for details.
+	* Replaced `AutoMapper` w/ `Manage` except for:
+	* Added `CreateAllFromJsonViaAutoMapper`
 
 ###Xamarin Realm v0.78.1 
 
-###Xamarin Realm v0.80.1
+* Package Version `1.0.1`
+
+	* Uses `AutoMapper` to auto-assign the Json derived object properies to the RealmObject
+	* Initial Public Release
 
 ##Nuget
 
@@ -24,13 +36,13 @@
 
 Ref: [https://www.nuget.org/packages/RealmJson.Extensions](https://www.nuget.org/packages/RealmJson.Extensions)
 
-##Issues
+##Issues?
 
 ###Post issues on [GitHub](https://github.com/sushihangover/Realm.Json.Extensions/issues)
 
 ##Need Help
 
-Post on [StackOverflow](http://stackoverflow.com/questions/tagged/xamarin+realm) with the tags: **`[XAMARIN]`** **`[REALM]`**
+Post on [StackOverflow](http://stackoverflow.com/questions/tagged/xamarin+realm) with the tags: **`[XAMARIN]`** **`[REALM]`** **`[JSON]`**
 
 
 ##Extension API
@@ -38,10 +50,28 @@ Post on [StackOverflow](http://stackoverflow.com/questions/tagged/xamarin+realm)
 * A Realm Instance:
 	* .CreateAllFromJson\<T\>(string)
 	* .CreateAllFromJson\<T\>(Stream)
+ 	* .CreateAllFromJsonViaAutoMapper\<T\>(Stream)
 	* .CreateObjectFromJson\<T\>(string)
 	* .CreateObjectFromJson\<T\>(Stream)
 	* .CreateOrUpdateObjectFromJson\<T\>(string)
  	* .CreateOrUpdateObjectFromJson\<T\>(Stream)
+
+
+### <sup>(1)</sup>`Xamarin.Forms` Usage
+
+`AutoMapper` does not support PCL `Profile 259`<sup>(2)</sup> and thus adding this Nuget package will fail if applied to a default `Xamarin.Form` project. 
+
+You can change your Xamarin.From project to `Profile 
+111`, then **retarget** the `Xamarin.Forms` package, and you will be able to add the Nuget package.
+
+See the `Xamarin.Forms`-based (`Nuget.Test`) project in the code repo as an example.
+
+Note: Once Xamarin has full support for `.NET Standard` and AutoMapper releases v5.2 <sup>(3)</sup>, this mess should go away.
+
+<sup>(2)</sup> https://github.com/AutoMapper/AutoMapper/issues/1531
+
+<sup>(3)</sup> https://github.com/AutoMapper/AutoMapper/issues/1532
+
 
 ##Usage / Examples
 	
