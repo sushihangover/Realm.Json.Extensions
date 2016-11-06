@@ -6,7 +6,7 @@
 
 ##Current project status
 
-| Git Branch | Xamarin.Android | Xamarin.iOS | Xamarin.Forms<sup>(1)</sup>
+| Git Branch | Xamarin.Android | Xamarin.iOS | Xamarin.Forms[<sup>(1)</sup>](#1xamarinforms-usage)
 | :------ | :------: | :------: | :------: |
 | **master** | ![](media/passing.png) | ![](media/passing.png) | ![](media/passing.png) |
 
@@ -59,14 +59,14 @@ Post on [StackOverflow](http://stackoverflow.com/questions/tagged/xamarin+realm)
 
 ### <sup>(1)</sup>`Xamarin.Forms` Usage
 
-`AutoMapper` does not support PCL `Profile 259`<sup>(2)</sup> and thus adding this Nuget package will fail if applied to a default `Xamarin.Form` project. 
+`AutoMapper` does not support PCL `Profile 259`[<sup>(2)</sup>)](https://github.com/AutoMapper/AutoMapper/issues/1531) and thus adding this Nuget package will fail if applied to a default `Xamarin.Form` project. 
 
 You can change your Xamarin.From project to `Profile 
 111`, then **retarget** the `Xamarin.Forms` package, and you will be able to add the Nuget package.
 
 See the `Xamarin.Forms`-based (`Nuget.Test`) project in the code repo as an example.
 
-Note: Once Xamarin has full support for `.NET Standard` and AutoMapper releases v5.2 <sup>(3)</sup>, this mess should go away.
+Note: Once Xamarin has full support for `.NET Standard` and AutoMapper releases v5.2 [<sup>(3)</sup>](https://github.com/AutoMapper/AutoMapper/issues/1532), this mess should go away.
 
 <sup>(2)</sup> https://github.com/AutoMapper/AutoMapper/issues/1531
 
