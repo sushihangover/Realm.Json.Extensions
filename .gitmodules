@@ -1,0 +1,3 @@
+[submodule "realm-dotnet"]
+	path = realm-dotnet
+	url = https://github.com/realm/realm-dotnet.git

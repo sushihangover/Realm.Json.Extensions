@@ -17,6 +17,7 @@
     <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <ReleaseVersion>1.1.0</ReleaseVersion>
+    <AndroidTlsProvider></AndroidTlsProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -28,6 +29,8 @@
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
     <AndroidSupportedAbis>arm64-v8a;armeabi-v7a;x86</AndroidSupportedAbis>
+<AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
+<AndroidTlsProvider>btls</AndroidTlsProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
 <!--
@@ -2676,6 +2679,27 @@
 	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
 	<LLVMEnable>false</LLVMEnable>
 -->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<AndroidTlsProvider></AndroidTlsProvider>
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -2711,11 +2735,11 @@
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-hdpi\Icon.png" />
-    <AndroidResource Include="Resources\mipmap-mdpi\Icon.png" />
-    <AndroidResource Include="Resources\mipmap-xhdpi\Icon.png" />
-    <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\States.json" />

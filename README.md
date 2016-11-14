@@ -116,7 +116,7 @@ Note: Once Xamarin has full support for `.NET Standard` and AutoMapper releases 
 	xbuild /p:SolutionDir=./ /target:Build /p:Configuration=Release RealmJson.Extensions/RealmJson.Extensions.csproj
 
 
-##Testing / NUnitLite Automatation:
+##Testing / NUnitLite Automation:
 
 ###`Xamarin.Android`
 

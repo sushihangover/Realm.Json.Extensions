@@ -4,5 +4,5 @@
 	<uses-permission android:name="android.permission.DELETE_CACHE_FILES" />
 	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-	<application android:label="RealmJson.Test.Droid"></application>
+	<application android:label="RealmJson.Test.Droid" android:icon="@mipmap/ic_launcher"></application>
 </manifest>
