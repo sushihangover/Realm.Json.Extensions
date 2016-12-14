@@ -31,7 +31,8 @@ Post on [StackOverflow](http://stackoverflow.com/questions/tagged/xamarin+realm)
 
 ##API Reference:
 
-TODO, place doc link here
+[https://sushihangover.github.io/Realm.Json.Extensions/](https://sushihangover.github.io/Realm.Json.Extensions/)
+
 
 ##Extension API:
 
