@@ -1,0 +1,34 @@
+[OPTIONS]
+Compatibility=1.1
+Full-text search=Yes
+Contents file=index.hhc
+Default Window=main
+Default topic=index.html
+Index file=index.hhk
+Language=0x409 English (United States)
+Title=SushiHangover.RealmJson.Extensions
+
+[WINDOWS]
+main="SushiHangover.RealmJson.Extensions","index.hhc","index.hhk","index.html","index.html",,,,,0x23520,,0x10387e,,,,,,,,0
+
+[FILES]
+namespace_sushi_hangover.html
+namespace_sushi_hangover_1_1_realm_json.html
+dir_1148ebc2b25b55095aebf6f4cbb6efca.html
+dir_81692ea059f90dfc3a4a8d72e861a8a1.html
+dir_68267d1309a1af8e8297ef4c3efbcdba.html
+index.html
+namespaces.html
+tab_a.png
+tab_b.png
+tab_h.png
+tab_s.png
+nav_h.png
+nav_f.png
+bc_s.png
+doxygen.png
+closed.png
+open.png
+bdwn.png
+sync_on.png
+sync_off.png

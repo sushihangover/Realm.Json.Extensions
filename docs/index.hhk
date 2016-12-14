@@ -1,0 +1,11 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML><HEAD></HEAD><BODY>
+<OBJECT type="text/site properties">
+<param name="FrameName" value="right">
+</OBJECT>
+<UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_sushi_hangover.html"><param name="Name" value="SushiHangover"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_sushi_hangover_1_1_realm_json.html"><param name="Name" value="SushiHangover::RealmJson"></OBJECT>
+</UL>
+</BODY>
+</HTML>
