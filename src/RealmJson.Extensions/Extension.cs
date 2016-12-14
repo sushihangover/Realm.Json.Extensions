@@ -190,8 +190,9 @@ namespace SushiHangover.RealmJson
 				}
 				if (realmObject == null)
 				{
-					realmObject = realm.CreateObject(typeof(T).Name);
+					realmObject = (T)Activator.CreateInstance(typeof(T));
 					newMapper.Map<T, T>(jsonObject, realmObject);
+					realm.Manage(realmObject, true);
 				}
 				else
 				{
