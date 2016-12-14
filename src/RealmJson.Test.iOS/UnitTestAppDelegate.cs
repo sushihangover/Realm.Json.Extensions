@@ -29,11 +29,13 @@ namespace RealmJson.Test.iOS
 
 			// register every tests included in the main application/assembly
 			runner.Add(System.Reflection.Assembly.GetExecutingAssembly());
+
+#if UNITTEST
 			// start running the test suites as soon as the application is loaded
 			runner.AutoStart = true;
 			// crash the application (to ensure it's ended) and return to springboard
 			runner.TerminateAfterExecution = true;
-
+#endif
 			window.RootViewController = new UINavigationController(runner.GetViewController());
 
 			// make the window visible
