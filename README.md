@@ -1,38 +1,23 @@
-![RealmJson.Extensions](media/SushiHangover.RealmJson.png)
+<img style="float: right;" src="https://github.com/sushihangover/Realm.Json.Extensions/raw/master/media/SushiHangover.RealmJson.png">
 
-#SushiHangover.RealmJson.Extensions
+##SushiHangover.RealmJson.Extensions
 
-####Extension Methods for adding JSON APIs to a Realm Instance 
+**Extension Methods for adding JSON APIs to a Realm Instance**
 
 ##Current project status:
 
-| Git Branch | Xamarin.Android | Xamarin.iOS | Xamarin.Forms[<sup>(1)</sup>](#1xamarinforms-usage)
-| :------ | :------: | :------: | :------: |
-| **master** | ![](media/passing.png) | ![](media/passing.png) | ![](media/passing.png) |
+[![Build status](https://ci.appveyor.com/api/projects/status/ronof3ruyjpl1c4v/branch/master?svg=true)](https://ci.appveyor.com/project/sushihangover/realm-json-extensions/branch/master)
 
-<!--* The CI builds are generously hosted and run on ~~~
--->
-##[Realm](https://realm.io/docs/xamarin/latest/) Versions:
-
-
-###Xamarin Realm v0.80.0
-
-* Package Version `1.1.0`
-
-	* Due to the changes in `Manage`, it is now faster to create/update `RealmObject`s when dealing with under 1k records then using `AutoMapper`, see [Perf.md](https://github.com/sushihangover/Realm.Json.Extensions/blob/master/Perf.md) for details.
-	* Replaced `AutoMapper` w/ `Manage` except for:
-	* Added `CreateAllFromJsonViaAutoMapper`
-
-###Xamarin Realm v0.78.1 
-
-* Package Version `1.0.1`
-
-	* Uses `AutoMapper` to auto-assign the Json derived object properies to the RealmObject
-	* Initial Public Release
 
 ##Nuget:
 
-`PM> Install-Package RealmJson.Extensions`
+<div class="nuget-badge">
+<p>
+<code>
+PM> Install-Package RealmJson.Extensions
+</code>
+</p>
+</div>
 
 Ref: [https://www.nuget.org/packages/RealmJson.Extensions](https://www.nuget.org/packages/RealmJson.Extensions)
 
@@ -44,6 +29,9 @@ Ref: [https://www.nuget.org/packages/RealmJson.Extensions](https://www.nuget.org
 
 Post on [StackOverflow](http://stackoverflow.com/questions/tagged/xamarin+realm) with the tags: **`[XAMARIN]`** **`[REALM]`** **`[JSON]`**
 
+##API Reference:
+
+TODO, place doc link here
 
 ##Extension API:
 
@@ -108,6 +96,16 @@ Note: Once Xamarin has full support for `.NET Standard` and AutoMapper releases 
 
 <sup>(3)</sup> https://github.com/AutoMapper/AutoMapper/issues/1532
 
+##Build Documention:
+
+API Reference documention is built via the great <a href="http://www.doxygen.org/index.html">
+<img src="http://www.stack.nl/~dimitri/doxygen/doxygen.png" alt="doxygen"/>
+</a>
+
+<div class="code">
+doxygen Doxygen/realmthread.config
+</div>
+
 ##Building:
 
 ###`xbuild` or `msbuild` based:
@@ -151,3 +149,40 @@ See [Perf.md](https://github.com/sushihangover/Realm.Json.Extensions/blob/master
 ##License
 
 Consult [LICENSE](https://github.com/sushihangover/Realm.Json.Extensions/blob/master/LICENSE)
+
+<head>
+<style>
+.nuget-badge code {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background-color: #202020;
+    border: 4px solid silver;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px #6e6e6e;
+    color: #e2e2e2;
+    display: block;
+    font: 1.0em 'andale mono', 'lucida console', monospace;
+    line-height: 1.5em;
+    overflow: auto;
+    padding: 15px
+}
+.nuget-badge code::before {
+    content: "PM> "
+}
+.code {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background-color: #202020;
+    border: 4px solid silver;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px #6e6e6e;
+    color: #e2e2e2;
+    display: block;
+    font: 1.0em 'andale mono', 'lucida console', monospace;
+    line-height: 1.5em;
+    overflow: auto;
+    padding: 15px
+}
+
+</style>
+</head>

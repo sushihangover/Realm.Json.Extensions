@@ -1,0 +1,21 @@
+create:
+  include-footer: true
+  footer-heading: Where to get it
+  footer-content: You can download this release from [nuget.org](https://www.nuget.org/packages/Realm.Json.Extensions/)
+  footer-includes-milestone: true
+  milestone-replace-text: '{milestone}'
+export:
+  include-created-date-in-title: false
+  created-date-string-format:
+  perform-regex-removal: false
+  regex-text:
+  multiline-regex: false
+issue-labels-include:
+- Bug
+- Feature
+- Improvement
+- Enhancement
+issue-labels-exclude:
+- Internal Refactoring
+- Internal
+
