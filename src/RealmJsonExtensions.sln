@@ -11,11 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealmJson.Test.iOS", "Realm
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{107F0B2C-9E27-4B12-B9D4-65DA834DF134}"
 	ProjectSection(SolutionItems) = preProject
-		README.md = README.md
-		Perf.md = Perf.md
-		media\RealmJson.Extensions.md = media\RealmJson.Extensions.md
-		.nuget\NuGet.targets = .nuget\NuGet.targets
 		RealmJson.Extensions\RealmJson.Extensions.nuspec = RealmJson.Extensions\RealmJson.Extensions.nuspec
+		..\README.md = ..\README.md
+		..\Perf.md = ..\Perf.md
+		..\LICENSE = ..\LICENSE
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuget.Test", "Nuget.Test", "{66FF9BD8-BF3C-4767-840B-70261446819F}"
