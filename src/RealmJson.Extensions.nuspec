@@ -14,7 +14,7 @@
     <licenseUrl>https://github.com/sushihangover/Realm.Json.Extensions</licenseUrl>
     <tags>Realm Xamarin Json Netwonsoft SushiHangover</tags>
   <dependencies>
-     <dependency id="Realm" version="0.80.0" />
+     <dependency id="Realm" version="0.81.0" />
      <dependency id="AutoMapper" version="5.1.1" />
      <dependency id="Newtonsoft.Json" version="9.0.0" />
  </dependencies>

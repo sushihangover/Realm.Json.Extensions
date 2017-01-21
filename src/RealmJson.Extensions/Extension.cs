@@ -29,6 +29,7 @@ namespace SushiHangover.RealmJson
 		/// <returns></returns>
 		/// <param name="realm">Realm Instance</param>
 		/// <param name="jsonString">Json string</param>
+ 		/// <param name="inTransaction">bool.</param>
 		/// <typeparam name="T">RealmOject-based Class..</typeparam>
 		public static T CreateObjectFromJson<T>(this Realm realm, string jsonString, bool inTransaction = false) where T : RealmObject
 		{
@@ -134,7 +135,7 @@ namespace SushiHangover.RealmJson
 		/// </summary>
 		/// <param name="realm">Realm Instance.</param>
 		/// <param name="stream">Stream.</param>
-		/// <param name="updateExistingRecords">bool.</param>
+		/// <param name="inTransaction">bool.</param>
 		/// <typeparam name="T">RealmObject-based Class.</typeparam>
 		public static void CreateAllFromJsonViaAutoMapper<T>(this Realm realm, Stream stream, bool inTransaction = false) where T : RealmObject
 		{
@@ -192,7 +193,7 @@ namespace SushiHangover.RealmJson
 				{
 					realmObject = (T)Activator.CreateInstance(typeof(T));
 					newMapper.Map<T, T>(jsonObject, realmObject);
-					realm.Manage(realmObject, true);
+					realm.Add(realmObject, true);
 				}
 				else
 				{
@@ -228,13 +229,13 @@ namespace SushiHangover.RealmJson
 		{
 			if (inTransaction)
 			{
-				realm.Manage(realmObject, updateRecord);
+				realm.Add(realmObject, updateRecord);
 			}
 			else
 			{
 				realm.Write(() =>
 				{
-					realm.Manage(realmObject, updateRecord);
+					realm.Add(realmObject, updateRecord);
 				});
 			}
 			return realmObject;
@@ -272,9 +273,9 @@ namespace SushiHangover.RealmJson
 				{
 					castPKValue = Convert.ToInt64(primaryKeyValue);
 				}
-				return realm.ObjectForPrimaryKey(type.Name, (long)castPKValue);
+				return realm.Find(type.Name, (long)castPKValue);
 			}
-			return realm.ObjectForPrimaryKey(type.Name, (string)primaryKeyValue);
+			return realm.Find(type.Name, (string)primaryKeyValue);
 		}
 
 		//void createOrUpdateAllFromJson(Class<E> clazz, InputStream in)
