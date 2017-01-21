@@ -112,7 +112,7 @@ namespace RealmJson.Test
 					theRealm.CreateObjectFromJson<StateUnique>(stream, inTransaction: true);
 					transaction.Rollback();
 				}
-				Assert.IsTrue(theRealm.ObjectForPrimaryKey<StateUnique>("AL") == null);
+				Assert.IsTrue(theRealm.Find<StateUnique>("AL") == null);
 			}
 		}
 
