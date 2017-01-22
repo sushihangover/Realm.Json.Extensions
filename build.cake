@@ -131,7 +131,7 @@ Action<string, string> unitTestApp = (bundleId, appPath) =>
 
     var setting = new SimCtlSettings() { ToolPath = FindXCodeTool("simctl") };
     var simulators = ListAppleSimulators(setting);
-    var device = simulators.First(x => x.Name == "xUnit Runner" & x.Runtime == "iOS 10.1");
+    var device = simulators.First(x => x.Name == "xUnit Runner" & x.Runtime == "iOS 10.2");
     // Information(string.Format($"Name={device.Name}, UDID={device.UDID}, Runtime={device.Runtime}, Availability={device.Availability}"));
 
     Information("LaunchAppleSimulator");
