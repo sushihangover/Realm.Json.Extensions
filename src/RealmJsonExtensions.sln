@@ -51,6 +51,9 @@ Global
 		Release|iPhone = Release|iPhone
 		Release|iPhoneSimulator = Release|iPhoneSimulator
 		Debug|iPhone = Debug|iPhone
+		Nuget.Droid|Any CPU = Nuget.Droid|Any CPU
+		Nuget.Droid.Debug|Any CPU = Nuget.Droid.Debug|Any CPU
+		Nuget.Droid.Release|Any CPU = Nuget.Droid.Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{AA082691-B917-4BF9-BCCE-B5F9AA2AABF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -97,6 +100,10 @@ Global
 		{2FF637D2-4DE1-4C62-803E-EEB098095178}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{2FF637D2-4DE1-4C62-803E-EEB098095178}.Debug|iPhone.ActiveCfg = Debug|Any CPU
 		{2FF637D2-4DE1-4C62-803E-EEB098095178}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{2FF637D2-4DE1-4C62-803E-EEB098095178}.Nuget.Droid.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FF637D2-4DE1-4C62-803E-EEB098095178}.Nuget.Droid.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FF637D2-4DE1-4C62-803E-EEB098095178}.Nuget.Droid.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FF637D2-4DE1-4C62-803E-EEB098095178}.Nuget.Droid.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE2E772F-FF0F-4A09-BF2C-3924F5CE5918}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
 		{EE2E772F-FF0F-4A09-BF2C-3924F5CE5918}.Release|Any CPU.ActiveCfg = Release|iPhone
 		{EE2E772F-FF0F-4A09-BF2C-3924F5CE5918}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
@@ -117,6 +124,10 @@ Global
 		{58E06C09-DAA0-4652-8AFB-44D5DFAAFFAE}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{58E06C09-DAA0-4652-8AFB-44D5DFAAFFAE}.Debug|iPhone.ActiveCfg = Debug|Any CPU
 		{58E06C09-DAA0-4652-8AFB-44D5DFAAFFAE}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{58E06C09-DAA0-4652-8AFB-44D5DFAAFFAE}.Nuget.Droid.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58E06C09-DAA0-4652-8AFB-44D5DFAAFFAE}.Nuget.Droid.Release|Any CPU.Build.0 = Release|Any CPU
+		{58E06C09-DAA0-4652-8AFB-44D5DFAAFFAE}.Nuget.Droid.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58E06C09-DAA0-4652-8AFB-44D5DFAAFFAE}.Nuget.Droid.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		description = Extension Methods for adding JSON APIs to a Realm Instance

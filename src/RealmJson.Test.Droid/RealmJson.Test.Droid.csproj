@@ -2715,6 +2715,333 @@
 	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
 	<LLVMEnable>false</LLVMEnable>
 -->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'NugetTest|AnyCPU' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\NugetTest</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <AndroidSupportedAbis>arm64-v8a;armeabi;armeabi-v7a;x86</AndroidSupportedAbis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'NugetRelease|AnyCPU' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\NugetRelease</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <AndroidSupportedAbis>arm64-v8a;armeabi;armeabi-v7a;x86</AndroidSupportedAbis>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -2733,7 +3060,7 @@
       <HintPath>..\packages\Remotion.Linq.2.1.1\lib\portable-net45+win+wpa81+wp80\Remotion.Linq.dll</HintPath>
     </Reference>
     <Reference Include="Realm">
-      <HintPath>..\packages\Realm.0.80.0\lib\MonoAndroid44\Realm.dll</HintPath>
+      <HintPath>..\packages\Realm.0.81.0\lib\MonoAndroid44\Realm.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -2772,5 +3099,5 @@
 	<Target Name="RunTests" DependsOnTargets="_ValidateAndroidPackageProperties">
 	    <Exec Command="$(_AndroidPlatformToolsDirectory)adb $(AdbTarget) $(AdbOptions) shell am instrument -w $(_AndroidPackage)/app.tests.TestInstrumentation" />
 	</Target>
-	<Import Project="..\packages\Realm.0.80.0\build\Realm.targets" Condition="Exists('..\packages\Realm.0.80.0\build\Realm.targets')" />
+	<Import Project="..\packages\Realm.0.81.0\build\Realm.targets" Condition="Exists('..\packages\Realm.0.81.0\build\Realm.targets')" />
 </Project>
