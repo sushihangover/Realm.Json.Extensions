@@ -90,7 +90,6 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
-    <Reference Include="MonoTouch.NUnitLite" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.9.0.2-beta1\lib\netstandard1.1\Newtonsoft.Json.dll</HintPath>
@@ -107,8 +106,9 @@
       <HintPath>..\packages\Remotion.Linq.2.1.1\lib\portable-net45+win+wpa81+wp80\Remotion.Linq.dll</HintPath>
     </Reference>
     <Reference Include="Realm">
-      <HintPath>..\packages\Realm.0.82.0\lib\Xamarin.iOS10\Realm.dll</HintPath>
+      <HintPath>..\packages\Realm.0.82.1\lib\Xamarin.iOS10\Realm.dll</HintPath>
     </Reference>
+    <Reference Include="MonoTouch.NUnitLite" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -140,5 +140,5 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Fody.1.29.4\build\dotnet\Fody.targets" Condition="Exists('..\packages\Fody.1.29.4\build\dotnet\Fody.targets')" />
   <Import Project="..\packages\Realm.0.78.1\build\Realm.targets" Condition="Exists('..\packages\Realm.0.78.1\build\Realm.targets')" />
-  <Import Project="..\packages\Realm.0.82.0\build\Realm.targets" Condition="Exists('..\packages\Realm.0.82.0\build\Realm.targets')" />
+  <Import Project="..\packages\Realm.0.82.1\build\Realm.targets" Condition="Exists('..\packages\Realm.0.82.1\build\Realm.targets')" />
 </Project>

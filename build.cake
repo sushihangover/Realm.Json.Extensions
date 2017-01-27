@@ -12,6 +12,7 @@ using System.Threading;
 
 #tool "nuget:?package=Cake.AppleSimulator.SushiHangover"
 #tool "nuget:?package=SushiHangover.RealmThread"
+#tool "nuget:?package=RealmJson.Extensions"
 #tool "nuget:?package=xunit.runner.console"
 #tool "nuget:?package=GitVersion.CommandLine"
 #tool "GitReleaseManager"
@@ -182,6 +183,7 @@ Action<string, string> unitTestApp = (bundleId, appPath) =>
 /////////////////////////////////////////////////////////////////////////////
 // SETUP / TEARDOWN
 /////////////////////////////////////////////////////////////////////////////
+
 Setup((context) =>
 {
     Information("Building version {0} of SushiHangover.RealmJson.Extensions. (isTagged: {1})", informationalVersion, isTagged);
