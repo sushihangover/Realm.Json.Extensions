@@ -29,7 +29,7 @@ namespace SushiHangover.RealmJson
 		/// <returns></returns>
 		/// <param name="realm">Realm Instance</param>
 		/// <param name="jsonString">Json string</param>
- 		/// <param name="inTransaction">bool.</param>
+		/// <param name="inTransaction">bool.</param>
 		/// <typeparam name="T">RealmOject-based Class..</typeparam>
 		public static T CreateObjectFromJson<T>(this Realm realm, string jsonString, bool inTransaction = false) where T : RealmObject
 		{
@@ -225,7 +225,7 @@ namespace SushiHangover.RealmJson
 		//	});
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		static T CreateObject<T>(Realm realm, T realmObject, bool updateRecord, bool inTransaction ) where T : RealmObject
+		static T CreateObject<T>(Realm realm, T realmObject, bool updateRecord, bool inTransaction) where T : RealmObject
 		{
 			if (inTransaction)
 			{
@@ -276,6 +276,33 @@ namespace SushiHangover.RealmJson
 				return realm.Find(type.Name, (long)castPKValue);
 			}
 			return realm.Find(type.Name, (string)primaryKeyValue);
+		}
+
+		public static T NonManagedCopy<T>(this RealmObject realmObject) where T : RealmObject
+		{
+			var newRecordConfiguration = new MapperConfiguration(cfg =>
+			{
+				cfg.CreateMap<T, T>();
+			});
+			var newMapper = newRecordConfiguration.CreateMapper();
+
+			var realmObjectCopy = (T)Activator.CreateInstance(typeof(T));
+			newMapper.Map(realmObject, realmObjectCopy);
+			return realmObjectCopy;
+		}
+
+		public static RealmObject NonManagedCopy(this RealmObject realmObject)
+		{
+			var objectType = realmObject.GetType();
+			var newRecordConfiguration = new MapperConfiguration(cfg =>
+			{
+				cfg.CreateMap(objectType, objectType);
+			});
+			var newMapper = newRecordConfiguration.CreateMapper();
+
+			var realmObjectCopy = Activator.CreateInstance(objectType) as RealmObject;
+			newMapper.Map(realmObject, realmObjectCopy);
+			return realmObjectCopy;
 		}
 
 		//void createOrUpdateAllFromJson(Class<E> clazz, InputStream in)

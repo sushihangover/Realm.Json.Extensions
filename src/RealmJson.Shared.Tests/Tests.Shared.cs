@@ -269,6 +269,86 @@ namespace RealmJson.Test
 			}
 		}
 
+		[Test]
+		public void NonManagedCopyFromNonManagedGenericType()
+		{
+			var obj1 = new State
+			{
+				name = "ZZ",
+				abbreviation = "Z"
+			};
+			var obj2 = obj1.NonManagedCopy<State>();
+			Assert.False(obj2.IsManaged);
+			// Non-managed objects are never equivalate, this RealmObject.Equals can not be used
+			Assert.AreEqual(obj1.abbreviation, obj2.abbreviation);
+			Assert.AreEqual(obj1.name, obj2.name);
+		}
+
+		[Test]
+		public void NonManagedCopyFromNonManagedRealmObjectType()
+		{
+			var obj1 = new State
+			{
+				name = "ZZ",
+				abbreviation = "Z"
+			};
+			var obj2 = obj1.NonManagedCopy();
+			var obj3 = obj2 as State;
+			// Non-managed objects are never equivalate, this RealmObject.Equals can not be used
+			Assert.False(obj3.IsManaged);
+			Assert.AreEqual(obj1.abbreviation, obj3.abbreviation);
+			Assert.AreEqual(obj1.name, obj3.name);
+		}
+
+		[Test]
+		public void NonManagedCopyFromManagedGenericType()
+		{
+			using (var theRealm = Realm.GetInstance(RealmDBTempPath()))
+			{
+				State obj1 = null;
+				theRealm.Write(() =>
+				{
+					var tmp = new State
+					{
+						name = "ZZ",
+						abbreviation = "Z"
+					};
+					obj1 = theRealm.Add(tmp);
+				});
+				Assert.True(obj1.IsManaged);
+				var obj2 = obj1.NonManagedCopy<State>();
+				// Non-managed objects are never equivalate, this RealmObject.Equals can not be used
+				Assert.False(obj2.IsManaged);
+				Assert.AreEqual(obj1.abbreviation, obj2.abbreviation);
+				Assert.AreEqual(obj1.name, obj2.name);
+			}
+		}
+
+		[Test]
+		public void NonManagedCopyFromManagedRealmObjectType()
+		{
+			using (var theRealm = Realm.GetInstance(RealmDBTempPath()))
+			{
+				State obj1 = null;
+				theRealm.Write(() =>
+				{
+					var tmp = new State
+					{
+						name = "ZZ",
+						abbreviation = "Z"
+					};
+					obj1 = theRealm.Add(tmp);
+				});
+				Assert.True(obj1.IsManaged);
+				var obj2 = obj1.NonManagedCopy() as State;
+				// Non-managed objects are never equivalate, this RealmObject.Equals can not be used
+				Assert.False(obj2.IsManaged);
+				Assert.AreEqual(obj1.abbreviation, obj2.abbreviation);
+				Assert.AreEqual(obj1.name, obj2.name);
+			}
+		}
+
+
 #endif
 
 	}
