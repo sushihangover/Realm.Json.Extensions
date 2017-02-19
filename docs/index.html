@@ -89,6 +89,12 @@ $(function() {
 <li>.CreateObjectFromJson&lt;T&gt;(Stream)</li>
 <li>.CreateOrUpdateObjectFromJson&lt;T&gt;(string)</li>
 <li>.CreateOrUpdateObjectFromJson&lt;T&gt;(Stream)</li>
+<li>.CreateOrUpdateObjectFromJson&lt;T&gt;(Stream)</li>
+</ul>
+</li>
+<li>A RealmObject Instance:<ul>
+<li>.NonManagedCopy&lt;T&gt;()</li>
+<li>.NonManagedCopy()</li>
 </ul>
 </li>
 </ul>
@@ -126,10 +132,10 @@ using (var fileStream = new FileStream("./Data/States.json", FileMode.Open, File
 <p><sup>(3)</sup> <a href="https://github.com/AutoMapper/AutoMapper/issues/1532">https://github.com/AutoMapper/AutoMapper/issues/1532</a></p>
 <h2>Build Documention:</h2>
 <p>API Reference documention is built via the great <a href="http://www.doxygen.org/index.html"></a></p>
-<div class="code"> doxygen Doxygen/doxygen.config </div><h2>Building:</h2>
+<div class="code"> doxygen Doxygen/realmthread.config </div><h2>Building:</h2>
 <h3><code>xbuild</code> or <code>msbuild</code> based:</h3>
-<pre class="fragment">xbuild /p:SolutionDir=./src /target:Clean /p:Configuration=Release src/RealmJson.Extensions/SushiHangover.RealmJson.csproj
-xbuild /p:SolutionDir=./src /target:Build /p:Configuration=Release src/RealmJson.Extensions/SushiHangover.RealmJson.csproj
+<pre class="fragment">xbuild /p:SolutionDir=./ /target:Clean /p:Configuration=Release   RealmJson.Extensions/RealmJson.Extensions.csproj
+xbuild /p:SolutionDir=./ /target:Build /p:Configuration=Release RealmJson.Extensions/RealmJson.Extensions.csproj
 </pre><h2>Testing / NUnitLite Automation:</h2>
 <h3><code>Xamarin.Android</code></h3>
 <pre class="fragment">adb shell am instrument -w RealmJson.Test.Droid/app.tests.TestInstrumentation

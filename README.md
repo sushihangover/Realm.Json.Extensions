@@ -44,7 +44,11 @@ Post on [StackOverflow](http://stackoverflow.com/questions/tagged/xamarin+realm)
 	* .CreateObjectFromJson\<T\>(Stream)
 	* .CreateOrUpdateObjectFromJson\<T\>(string)
  	* .CreateOrUpdateObjectFromJson\<T\>(Stream)
+ 	* .CreateOrUpdateObjectFromJson\<T\>(Stream)
 
+* A RealmObject Instance:
+ 	* .NonManagedCopy\<T\>()
+ 	* .NonManagedCopy()
 
 ##Usage / Examples:
 	
