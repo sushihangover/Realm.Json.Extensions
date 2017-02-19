@@ -96,9 +96,6 @@
     <Reference Include="AutoMapper">
       <HintPath>..\packages\AutoMapper.5.1.1\lib\netstandard1.3\AutoMapper.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetCross.Memory.Unsafe">
-      <HintPath>..\packages\DotNetCross.Memory.Unsafe.0.2.2\lib\dotnet\DotNetCross.Memory.Unsafe.dll</HintPath>
-    </Reference>
     <Reference Include="Remotion.Linq">
       <HintPath>..\packages\Remotion.Linq.2.1.1\lib\portable-net45+win+wpa81+wp80\Remotion.Linq.dll</HintPath>
     </Reference>
@@ -108,6 +105,9 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.9.0.2-beta2\lib\netstandard1.1\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetCross.Memory.Unsafe">
+      <HintPath>..\packages\DotNetCross.Memory.Unsafe.0.2.3.4\lib\netstandard1.0\DotNetCross.Memory.Unsafe.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
