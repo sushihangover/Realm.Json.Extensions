@@ -58,12 +58,14 @@ namespace SushiHangover.RealmJson
 			}
 		}
 
+
 		/// <summary>
 		/// Creates or updates a single RealmObject from a json string.
 		/// </summary>
-		/// <returns></returns>
+		/// <returns>the updatex object from json.</returns>
 		/// <param name="realm">Realm Instance.</param>
 		/// <param name="jsonString">Json string.</param>
+		/// <param name="inTransaction">If set to <c>true</c> in transaction.</param>
 		/// <typeparam name="T">RealmObject-based Class.</typeparam>
 		public static T CreateOrUpdateObjectFromJson<T>(this Realm realm, string jsonString, bool inTransaction = false) where T : RealmObject
 		{
@@ -76,7 +78,8 @@ namespace SushiHangover.RealmJson
 		/// </summary>
 		/// <param name="realm">Realm Instance.</param>
 		/// <param name="stream">Stream.</param>
-		/// <param name="updateExistingRecords">bool.</param>
+		/// <param name="updateExistingRecords">If set to <c>true</c> update existing records.</param>
+		/// <param name="inTransaction">If set to <c>true</c> in transaction.</param>
 		/// <typeparam name="T">RealmObject-based Class.</typeparam>
 		public static void CreateAllFromJson<T>(this Realm realm, Stream stream, bool updateExistingRecords = true, bool inTransaction = false) where T : RealmObject
 		{
@@ -107,6 +110,8 @@ namespace SushiHangover.RealmJson
 		/// </summary>
 		/// <param name="realm">Realm Instance.</param>
 		/// <param name="jsonString">Json string.</param>
+		/// <param name="updateExistingRecords">If set to <c>true</c> update existing records.</param>
+		/// <param name="inTransaction">If set to <c>true</c> in transaction.</param>
 		/// <typeparam name="T">RealmObject-based Class.</typeparam>
 		public static void CreateAllFromJson<T>(this Realm realm, string jsonString, bool updateExistingRecords = true, bool inTransaction = false) where T : RealmObject
 		{
@@ -278,6 +283,12 @@ namespace SushiHangover.RealmJson
 			return realm.Find(type.Name, (string)primaryKeyValue);
 		}
 
+		/// <summary>
+		/// Create a Generic non-managed RealmObject Copy
+		/// </summary>
+		/// <returns>The managed copy.</returns>
+		/// <param name="realmObject">Realm object.</param>
+		/// <typeparam name="T">The 1st type parameter.</typeparam>
 		public static T NonManagedCopy<T>(this RealmObject realmObject) where T : RealmObject
 		{
 			var newRecordConfiguration = new MapperConfiguration(cfg =>
@@ -291,6 +302,11 @@ namespace SushiHangover.RealmJson
 			return realmObjectCopy;
 		}
 
+		/// <summary>
+		/// Create a non-managed RealmObject Copy.
+		/// </summary>
+		/// <returns>The managed copy.</returns>
+		/// <param name="realmObject">Realm object.</param>
 		public static RealmObject NonManagedCopy(this RealmObject realmObject)
 		{
 			var objectType = realmObject.GetType();
