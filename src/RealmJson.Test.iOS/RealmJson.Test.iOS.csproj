@@ -100,14 +100,14 @@
       <HintPath>..\packages\Remotion.Linq.2.1.1\lib\portable-net45+win+wpa81+wp80\Remotion.Linq.dll</HintPath>
     </Reference>
     <Reference Include="MonoTouch.NUnitLite" />
-    <Reference Include="Realm">
-      <HintPath>..\packages\Realm.Database.1.0.3\lib\Xamarin.iOS10\Realm.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.9.0.2-beta2\lib\netstandard1.1\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="DotNetCross.Memory.Unsafe">
       <HintPath>..\packages\DotNetCross.Memory.Unsafe.0.2.3.4\lib\netstandard1.0\DotNetCross.Memory.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="Realm">
+      <HintPath>..\packages\Realm.Database.1.0.4\lib\Xamarin.iOS10\Realm.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -140,5 +140,5 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Fody.1.29.4\build\dotnet\Fody.targets" Condition="Exists('..\packages\Fody.1.29.4\build\dotnet\Fody.targets')" />
   <Import Project="..\packages\Realm.0.78.1\build\Realm.targets" Condition="Exists('..\packages\Realm.0.78.1\build\Realm.targets')" />
-  <Import Project="..\packages\Realm.Database.1.0.3\build\Realm.Database.targets" Condition="Exists('..\packages\Realm.Database.1.0.3\build\Realm.Database.targets')" />
+  <Import Project="..\packages\Realm.Database.1.0.4\build\Realm.Database.targets" Condition="Exists('..\packages\Realm.Database.1.0.4\build\Realm.Database.targets')" />
 </Project>
