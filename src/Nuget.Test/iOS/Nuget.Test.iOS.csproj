@@ -135,10 +135,10 @@
       <HintPath>..\..\packages\DotNetCross.Memory.Unsafe.0.2.3.4\lib\netstandard1.0\DotNetCross.Memory.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="Realm">
-      <HintPath>..\..\packages\Realm.Database.1.0.3\lib\Xamarin.iOS10\Realm.dll</HintPath>
+      <HintPath>..\..\packages\Realm.Database.1.0.4\lib\Xamarin.iOS10\Realm.dll</HintPath>
     </Reference>
     <Reference Include="RealmJson.Extensions">
-      <HintPath>..\..\packages\RealmJson.Extensions.1.1.7\lib\RealmJson.Extensions.dll</HintPath>
+      <HintPath>..\..\packages\RealmJson.Extensions.1.1.8\lib\RealmJson.Extensions.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -150,5 +150,5 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\..\packages\Fody.1.29.4\build\dotnet\Fody.targets" Condition="Exists('..\..\packages\Fody.1.29.4\build\dotnet\Fody.targets')" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.4.192-pre2\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.4.192-pre2\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
-  <Import Project="..\..\packages\Realm.Database.1.0.3\build\Realm.Database.targets" Condition="Exists('..\..\packages\Realm.Database.1.0.3\build\Realm.Database.targets')" />
+  <Import Project="..\..\packages\Realm.Database.1.0.4\build\Realm.Database.targets" Condition="Exists('..\..\packages\Realm.Database.1.0.4\build\Realm.Database.targets')" />
 </Project>
