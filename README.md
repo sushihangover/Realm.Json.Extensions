@@ -8,7 +8,6 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/ronof3ruyjpl1c4v/branch/master?svg=true)](https://ci.appveyor.com/project/sushihangover/realm-json-extensions/branch/master)
 
-
 ##Nuget:
 
 <div class="nuget-badge">
@@ -33,7 +32,6 @@ Post on [StackOverflow](http://stackoverflow.com/questions/tagged/xamarin+realm)
 
 [https://sushihangover.github.io/Realm.Json.Extensions/](https://sushihangover.github.io/Realm.Json.Extensions/)
 
-
 ##Extension API:
 
 * A Realm Instance:
@@ -49,6 +47,13 @@ Post on [StackOverflow](http://stackoverflow.com/questions/tagged/xamarin+realm)
 * A RealmObject Instance:
  	* .NonManagedCopy\<T\>()
  	* .NonManagedCopy()
+
+* A RealmResult Instance (IQueryable): 
+	* .NonManagedCopy<T>
+
+##Github Repo:
+
+[https://github.com/sushihangover/Realm.Json.Extensions](https://github.com/sushihangover/Realm.Json.Extensions)
 
 ##Usage / Examples:
 	
