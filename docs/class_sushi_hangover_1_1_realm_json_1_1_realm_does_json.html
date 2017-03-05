@@ -102,6 +102,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a7c3dfe4f916b49b0fad84a62230f891f"><td class="memItemLeft" align="right" valign="top">static RealmObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sushi_hangover_1_1_realm_json_1_1_realm_does_json.html#a7c3dfe4f916b49b0fad84a62230f891f">NonManagedCopy</a> (this RealmObject realmObject)</td></tr>
 <tr class="memdesc:a7c3dfe4f916b49b0fad84a62230f891f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a non-managed RealmObject Copy.  <a href="#a7c3dfe4f916b49b0fad84a62230f891f">More...</a><br /></td></tr>
 <tr class="separator:a7c3dfe4f916b49b0fad84a62230f891f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a374e4ccaed839107e1359e95b91a93f6"><td class="memItemLeft" align="right" valign="top">static IQueryable&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sushi_hangover_1_1_realm_json_1_1_realm_does_json.html#a374e4ccaed839107e1359e95b91a93f6">NonManagedCopy&lt; T &gt;</a> (this IQueryable&lt; T &gt; results)</td></tr>
+<tr class="memdesc:a374e4ccaed839107e1359e95b91a93f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a non-managed copy of Realm's Query Result.  <a href="#a374e4ccaed839107e1359e95b91a93f6">More...</a><br /></td></tr>
+<tr class="separator:a374e4ccaed839107e1359e95b91a93f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a085500d6fe5f05f265df55146c5c45ef"><td class="memItemLeft" align="right" valign="top">static IList&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sushi_hangover_1_1_realm_json_1_1_realm_does_json.html#a085500d6fe5f05f265df55146c5c45ef">NonManagedCopy&lt; T &gt;</a> (this IList&lt; T &gt; list)</td></tr>
+<tr class="memdesc:a085500d6fe5f05f265df55146c5c45ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a non-managed copy of Realm's Query Result.  <a href="#a085500d6fe5f05f265df55146c5c45ef">More...</a><br /></td></tr>
+<tr class="separator:a085500d6fe5f05f265df55146c5c45ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -561,7 +567,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <a id="ae8ebc3c7cfe3f30f4ed3484ef804e84a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8ebc3c7cfe3f30f4ed3484ef804e84a">&#9670;&nbsp;</a></span>NonManagedCopy< T >()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8ebc3c7cfe3f30f4ed3484ef804e84a">&#9670;&nbsp;</a></span>NonManagedCopy< T >() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -598,6 +604,104 @@ Public Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="typeconstraint">
+<dl><dt><b>Type Constraints</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>RealmObject</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a id="a374e4ccaed839107e1359e95b91a93f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a374e4ccaed839107e1359e95b91a93f6">&#9670;&nbsp;</a></span>NonManagedCopy< T >() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static IQueryable&lt;T&gt; <a class="el" href="class_sushi_hangover_1_1_realm_json_1_1_realm_does_json.html#a7c3dfe4f916b49b0fad84a62230f891f">SushiHangover.RealmJson.RealmDoesJson.NonManagedCopy</a>&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">this IQueryable&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>results</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a non-managed copy of Realm's Query Result. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">results</td><td>Realm collection</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type of the RealmObject in the results.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The collection of non-managed realm objects.</dd></dl>
+<div class="typeconstraint">
+<dl><dt><b>Type Constraints</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>RealmObject</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a id="a085500d6fe5f05f265df55146c5c45ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a085500d6fe5f05f265df55146c5c45ef">&#9670;&nbsp;</a></span>NonManagedCopy< T >() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static IList&lt;T&gt; <a class="el" href="class_sushi_hangover_1_1_realm_json_1_1_realm_does_json.html#a7c3dfe4f916b49b0fad84a62230f891f">SushiHangover.RealmJson.RealmDoesJson.NonManagedCopy</a>&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">this IList&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>list</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a non-managed copy of Realm's Query Result. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">results</td><td>Realm collection</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type of the RealmObject in the results.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The collection of non-managed realm objects.</dd></dl>
 <div class="typeconstraint">
 <dl><dt><b>Type Constraints</b></dt><dd>
 <table border="0" cellspacing="2" cellpadding="0">
