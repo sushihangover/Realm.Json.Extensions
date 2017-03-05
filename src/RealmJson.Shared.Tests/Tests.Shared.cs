@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -265,8 +266,72 @@ namespace RealmJson.Test
 						.TypeOf<Exception>()
 						.With.Property("Message")
 						.EqualTo(RealmDoesJson.ExMalFormeJsonMessage)
-	           );
+			   );
 			}
+		}
+
+		[Test]
+		public void NonManagedCollectionCopyFromNonManagedGenericType()
+		{
+			var nonManagedCollection = CreateTestCollection();
+			var nonManagedCollectionCopy = nonManagedCollection.NonManagedCopy();
+			Assert.False(nonManagedCollectionCopy.All(element => element.IsManaged));
+			Assert.True(EnumerablesAreEqual(nonManagedCollectionCopy, nonManagedCollection));
+		}
+
+		[Test]
+		public void NonManagedCollectionCopyFromManagedGenericType()
+		{
+			using (var theRealm = Realm.GetInstance(RealmDBTempPath()))
+			{
+				theRealm.Write(() =>
+				{
+					var nonManagedCollection = CreateTestCollection();
+					foreach (var item in nonManagedCollection)
+					{
+						theRealm.Add(item);
+					}
+				});
+
+				var managedCollection = theRealm.All<State>();
+
+				foreach (var managedObject in managedCollection)
+				{
+					Assert.True(managedObject.IsManaged);
+				}
+
+				var nonManagedCollectionCopy = managedCollection.NonManagedCopy();
+
+				foreach (var managedObject in nonManagedCollectionCopy)
+				{
+					Assert.False(managedObject.IsManaged);
+				}
+
+				Assert.True(EnumerablesAreEqual(managedCollection, nonManagedCollectionCopy));
+			}
+		}
+
+		private IList<State> CreateTestCollection()
+		{
+			var testObject1 = new State { name = "XX", abbreviation = "X" };
+			var testObject2 = new State { name = "YY", abbreviation = "Y" };
+			var testObject3 = new State { name = "ZZ", abbreviation = "Z" };
+			var testCollection = new[] { testObject1, testObject2, testObject3 };
+			return testCollection;
+		}
+
+		private bool EnumerablesAreEqual(IEnumerable<State> enumerable1, IEnumerable<State> enumerable2)
+		{
+			var elementCount = enumerable1.Count();
+			if (elementCount != enumerable2.Count()) return false;
+			for (var i = 0; i < elementCount; ++i)
+			{
+				var element1 = enumerable1.ElementAt(i);
+				var element2 = enumerable2.ElementAt(i);
+				if (element1.name != element2.name) return false;
+				if (element1.abbreviation != element2.abbreviation) return false;
+			}
+			return true;
 		}
 
 		[Test]

@@ -321,6 +321,41 @@ namespace SushiHangover.RealmJson
 			return realmObjectCopy;
 		}
 
+		/// <summary>
+		/// Create a non-managed copy of Realm's Query Result.
+		/// </summary>
+		/// <param name="results">Realm collection</param>
+		/// <typeparam name="T">Type of the <see cref="RealmObject"/> in the results.</typeparam>
+		/// <returns>The collection of non-managed realm objects.</returns>
+		public static IQueryable<T> NonManagedCopy<T>(this IQueryable<T> results) where T : RealmObject
+		{
+			var realmCollectionCopy = CopyRealmCollectionElements(results);
+			return realmCollectionCopy.AsQueryable();
+		}
+
+		/// <summary>
+		/// Create a non-managed copy of Realm's Query Result.
+		/// </summary>
+		/// <param name="results">Realm collection</param>
+		/// <typeparam name="T">Type of the <see cref="RealmObject"/> in the results.</typeparam>
+		/// <returns>The collection of non-managed realm objects.</returns>
+		public static IList<T> NonManagedCopy<T>(this IList<T> list) where T : RealmObject
+		{
+			return CopyRealmCollectionElements(list);
+		}
+
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		static IList<T> CopyRealmCollectionElements<T>(IEnumerable<T> collection) where T : RealmObject
+		{
+			var realmCollectionCopy = new List<T>();
+			foreach (var element in collection)
+			{
+				var nonManagedElementCopy = NonManagedCopy<T>(element);
+				realmCollectionCopy.Add(nonManagedElementCopy);
+			}
+			return realmCollectionCopy;
+		}
+
 		//void createOrUpdateAllFromJson(Class<E> clazz, InputStream in)
 		//Tries to update a list of existing objects identified by their primary key with new JSON data.
 		//<E extends RealmModel>
