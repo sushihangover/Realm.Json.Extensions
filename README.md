@@ -1,14 +1,14 @@
 <img style="float: right;" src="https://github.com/sushihangover/Realm.Json.Extensions/raw/master/media/SushiHangover.RealmJson.png">
 
-##SushiHangover.RealmJson.Extensions
+## SushiHangover.RealmJson.Extensions
 
 **Extension Methods for adding JSON APIs to a Realm Instance**
 
-##Current project status:
+## Current project status:
 
 [![Build status](https://ci.appveyor.com/api/projects/status/ronof3ruyjpl1c4v/branch/master?svg=true)](https://ci.appveyor.com/project/sushihangover/realm-json-extensions/branch/master)
 
-##Nuget:
+## Nuget:
 
 <div class="nuget-badge">
 <p>
@@ -20,19 +20,19 @@ PM> Install-Package RealmJson.Extensions
 
 Ref: [https://www.nuget.org/packages/RealmJson.Extensions](https://www.nuget.org/packages/RealmJson.Extensions)
 
-##Issues?
+## Issues?
 
 ###Post issues on [GitHub](https://github.com/sushihangover/Realm.Json.Extensions/issues)
 
-##Need Help?
+## Need Help?
 
 Post on [StackOverflow](http://stackoverflow.com/questions/tagged/xamarin+realm) with the tags: **`[XAMARIN]`** **`[REALM]`** **`[JSON]`**
 
-##API Reference:
+## API Reference:
 
 [https://sushihangover.github.io/Realm.Json.Extensions/](https://sushihangover.github.io/Realm.Json.Extensions/)
 
-##Extension API:
+## Extension API:
 
 * A Realm Instance:
 	* .CreateAllFromJson\<T\>(string)
@@ -51,20 +51,20 @@ Post on [StackOverflow](http://stackoverflow.com/questions/tagged/xamarin+realm)
 * A RealmResult Instance (IQueryable): 
 	* .NonManagedCopy<T>
 
-##Github Repo:
+## Github Repo:
 
 [https://github.com/sushihangover/Realm.Json.Extensions](https://github.com/sushihangover/Realm.Json.Extensions)
 
-##Usage / Examples:
+## Usage / Examples:
 	
-###Single RealmObject from Json-based Strings:
+### Single RealmObject from Json-based Strings:
 	
 	using (var theRealm = Realm.GetInstance(RealmDBTempPath()))
 	{
 		var realmObject = theRealm.CreateObjectFromJson<StateUnique>(jsonString);
 	}
 
-###Single RealmObject from a Stream:
+### Single RealmObject from a Stream:
 
 	using (var stream = new MemoryStream(byteArray))
 	using (var theRealm = Realm.GetInstance(RealmDBTempPath()))
@@ -73,7 +73,7 @@ Post on [StackOverflow](http://stackoverflow.com/questions/tagged/xamarin+realm)
 	}
 
 
-###Using Json Arrays from a Android Asset Stream:
+### Using Json Arrays from a Android Asset Stream:
 
 	using (var theRealm = Realm.GetInstance(RealmDBTempPath()))
 	using (var assetStream = Application.Context.Assets.Open("States.json"))
@@ -81,7 +81,7 @@ Post on [StackOverflow](http://stackoverflow.com/questions/tagged/xamarin+realm)
 		theRealm.CreateAllFromJson<State>(assetStream);
 	}
 
-###Using Json Arrays from a iOS Bundled Resource Stream:
+### Using Json Arrays from a iOS Bundled Resource Stream:
 
 	using (var theRealm = Realm.GetInstance(RealmDBTempPath()))
 	using (var fileStream = new FileStream("./Data/States.json", FileMode.Open, FileAccess.Read))
@@ -106,7 +106,7 @@ Note: Once Xamarin has full support for `.NET Standard` and AutoMapper releases 
 
 <sup>(3)</sup> https://github.com/AutoMapper/AutoMapper/issues/1532
 
-##Build Documention:
+## Build Documention:
 
 API Reference documention is built via the great <a href="http://www.doxygen.org/index.html">
 <img src="http://www.stack.nl/~dimitri/doxygen/doxygen.png" alt="doxygen"/>
@@ -116,17 +116,17 @@ API Reference documention is built via the great <a href="http://www.doxygen.org
 doxygen Doxygen/realmthread.config
 </div>
 
-##Building:
+## Building:
 
-###`xbuild` or `msbuild` based:
+### `xbuild` or `msbuild` based:
 
 	xbuild /p:SolutionDir=./ /target:Clean /p:Configuration=Release   RealmJson.Extensions/RealmJson.Extensions.csproj
 	xbuild /p:SolutionDir=./ /target:Build /p:Configuration=Release RealmJson.Extensions/RealmJson.Extensions.csproj
 
 
-##Testing / NUnitLite Automation:
+## Testing / NUnitLite Automation:
 
-###`Xamarin.Android`
+### `Xamarin.Android`
 
 	adb shell am instrument -w RealmJson.Test.Droid/app.tests.TestInstrumentation
 
@@ -136,7 +136,7 @@ Ref: [Automate Android Nunit Test](https://developer.xamarin.com/guides/android/
 Ref: [Issue 32005](https://bugzilla.xamarin.com/show_bug.cgi?id=32005)
 
 
-###`Xamarin.iOS`
+### `Xamarin.iOS`
 	
 	xbuild RealmJson.Test.iOS/RealmJson.Test.iOS.csproj /p:SolutionDir=~/
 	xcrun simctl list
@@ -145,7 +145,7 @@ Ref: [Issue 32005](https://bugzilla.xamarin.com/show_bug.cgi?id=32005)
 	xcrun simctl launch booted com.sushihangover.realmjson-test-ios
 	cat ~/Library/Logs/CoreSimulator/360D3BC6-4A6D-4B7E-A899-5C7651EC2107/system.log
 
-##Performance Testing:
+## Performance Testing:
 
 There is a `#if PERF` within `Tests.Shared.Perf.Streaming.cs` that contains multple tests to evaluate streaming performance and memory overhead. 
 
@@ -156,44 +156,7 @@ These test methods **try** to evaluate:
 
 See [Perf.md](https://github.com/sushihangover/Realm.Json.Extensions/blob/master/Perf.md) for details.
 
-##License
+## License
 
 Consult [LICENSE](https://github.com/sushihangover/Realm.Json.Extensions/blob/master/LICENSE)
-
-<head>
-<style>
-.nuget-badge code {
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    background-color: #202020;
-    border: 4px solid silver;
-    border-radius: 5px;
-    box-shadow: 2px 2px 3px #6e6e6e;
-    color: #e2e2e2;
-    display: block;
-    font: 1.0em 'andale mono', 'lucida console', monospace;
-    line-height: 1.5em;
-    overflow: auto;
-    padding: 15px
-}
-.nuget-badge code::before {
-    content: "PM> "
-}
-.code {
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    background-color: #202020;
-    border: 4px solid silver;
-    border-radius: 5px;
-    box-shadow: 2px 2px 3px #6e6e6e;
-    color: #e2e2e2;
-    display: block;
-    font: 1.0em 'andale mono', 'lucida console', monospace;
-    line-height: 1.5em;
-    overflow: auto;
-    padding: 15px
-}
-
-</style>
-</head>
 
