@@ -10,7 +10,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Nuget.Test.Droid</RootNamespace>
     <AssemblyName>Nuget.Test.Droid</AssemblyName>
-    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -94,9 +94,6 @@
     <Reference Include="Realm">
       <HintPath>..\..\packages\Realm.Database.1.6.0\lib\netstandard1.4\Realm.dll</HintPath>
     </Reference>
-    <Reference Include="RealmJson.Extensions">
-      <HintPath>..\..\packages\RealmJson.Extensions.1.1.11\lib\RealmJson.Extensions.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Android.Support.Annotations">
       <HintPath>..\..\packages\Xamarin.Android.Support.Annotations.25.4.0.2\lib\MonoAndroid70\Xamarin.Android.Support.Annotations.dll</HintPath>
     </Reference>
@@ -159,6 +156,9 @@
     </Reference>
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\..\packages\Xamarin.Forms.2.4.0.275-pre3\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="RealmJson.Extensions">
+      <HintPath>..\..\packages\RealmJson.Extensions.1.1.12\lib\RealmJson.Extensions.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
