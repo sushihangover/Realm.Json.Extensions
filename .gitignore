@@ -12,6 +12,9 @@
 Components/
 Tools
 
+#macOS files
+.DS_Store
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
