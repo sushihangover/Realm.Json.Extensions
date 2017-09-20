@@ -1,5 +1,6 @@
 version: 1.0.{build}
 environment:
+  CAKE_SETTINGS_SKIPVERIFICATION: true
   NUGET_SOURCE: https://www.nuget.org/api/v2/package
   GITHUB_USERNAME: sushihangover
   GITHUB_TOKEN:
