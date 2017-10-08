@@ -48,14 +48,8 @@
     <Reference Include="System.ComponentModel.TypeConverter">
       <HintPath>..\..\packages\System.ComponentModel.TypeConverter.4.3.0\lib\netstandard1.0\System.ComponentModel.TypeConverter.dll</HintPath>
     </Reference>
-    <Reference Include="AutoMapper">
-      <HintPath>..\..\packages\AutoMapper.6.1.1\lib\netstandard1.1\AutoMapper.dll</HintPath>
-    </Reference>
     <Reference Include="Realm.DataBinding">
       <HintPath>..\..\packages\Realm.DataBinding.1.2.0\lib\netstandard1.0\Realm.DataBinding.dll</HintPath>
-    </Reference>
-    <Reference Include="RealmJson.Extensions">
-      <HintPath>..\..\packages\RealmJson.Extensions.1.1.12\lib\RealmJson.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Realm">
       <HintPath>..\..\packages\Realm.Database.2.0.0-rc1\lib\portable-net45+sl5+wp8+wpa81+win8+monoandroid+Xamarin.iOS10+monotouch+Xamarin.Mac\Realm.dll</HintPath>
@@ -68,6 +62,12 @@
     </Reference>
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\..\packages\Xamarin.Forms.2.4.0.282\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\packages\AutoMapper.5.1.1\lib\portable-net45+win8+wpa81\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="RealmJson.Extensions">
+      <HintPath>..\..\packages\RealmJson.Extensions.1.1.12\lib\RealmJson.Extensions.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

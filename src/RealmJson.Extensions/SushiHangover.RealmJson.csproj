@@ -67,7 +67,7 @@
       <HintPath>..\packages\System.ComponentModel.TypeConverter.4.3.0\lib\netstandard1.0\System.ComponentModel.TypeConverter.dll</HintPath>
     </Reference>
     <Reference Include="Realm">
-      <HintPath>..\packages\Realm.Database.1.6.0\lib\portable-net45+sl5+wp8+wpa81+win8+monoandroid+Xamarin.iOS10+monotouch+Xamarin.Mac\Realm.dll</HintPath>
+      <HintPath>..\packages\Realm.Database.2.0.0-rc1\lib\portable-net45+sl5+wp8+wpa81+win8+monoandroid+Xamarin.iOS10+monotouch+Xamarin.Mac\Realm.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -79,5 +79,5 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\.nuget\NuGet.targets" Condition="Exists('..\.nuget\NuGet.targets')" />
-  <Import Project="..\packages\Realm.Database.1.6.0\build\Realm.Database.targets" Condition="Exists('..\packages\Realm.Database.1.6.0\build\Realm.Database.targets')" />
+  <Import Project="..\packages\Realm.Database.2.0.0-rc1\build\Realm.Database.targets" Condition="Exists('..\packages\Realm.Database.2.0.0-rc1\build\Realm.Database.targets')" />
 </Project>
