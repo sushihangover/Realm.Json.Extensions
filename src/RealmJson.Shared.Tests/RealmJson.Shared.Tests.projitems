@@ -10,8 +10,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Tests.Shared.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)State.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tests.Shared.Perf.Streaming.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SlidingStream.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\City.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\StatesWithCities.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\StateUnique.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\State.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Model\" />
   </ItemGroup>
 </Project>
