@@ -4,6 +4,9 @@
 
 **Extension Methods for adding JSON APIs to a Realm Instance**
 
+[Github Project](https://github.com/sushihangover/Realm.Json.Extensions)
+
+
 ##Current project status:
 
 [![Build status](https://ci.appveyor.com/api/projects/status/ronof3ruyjpl1c4v/branch/master?svg=true)](https://ci.appveyor.com/project/sushihangover/realm-json-extensions/branch/master)
