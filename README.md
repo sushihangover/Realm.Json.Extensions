@@ -1,8 +1,11 @@
-<img style="float: right;" src="https://github.com/sushihangover/Realm.Json.Extensions/raw/master/media/SushiHangover.RealmJson.png">
+![](https://github.com/sushihangover/Realm.Json.Extensions/raw/master/media/SushiHangover.RealmJson.png)
 
 ##SushiHangover.RealmJson.Extensions
 
 **Extension Methods for adding JSON APIs to a Realm Instance**
+
+[Github Project](https://github.com/sushihangover/Realm.Json.Extensions)
+
 
 ##Current project status:
 
@@ -32,6 +35,8 @@ Post on [StackOverflow](http://stackoverflow.com/questions/tagged/xamarin+realm)
 
 [https://sushihangover.github.io/Realm.Json.Extensions/](https://sushihangover.github.io/Realm.Json.Extensions/)
 
+Note: AutoMapper was removed in `v1.2.0` in favor of using Json to create deep-copy non-managed Realm objects
+
 ##Extension API:
 
 * A Realm Instance:
@@ -46,10 +51,9 @@ Post on [StackOverflow](http://stackoverflow.com/questions/tagged/xamarin+realm)
 
 * A RealmObject Instance:
  	* .NonManagedCopy\<T\>()
- 	* .NonManagedCopy()
 
 * A RealmResult Instance (IQueryable): 
-	* .NonManagedCopy<T>
+	* .NonManagedCopy\<T\>()
 
 ##Github Repo:
 
@@ -113,7 +117,7 @@ API Reference documention is built via the great <a href="http://www.doxygen.org
 </a>
 
 <div class="code">
-doxygen Doxygen/realmthread.config
+doxygen Doxygen/doxygen.config
 </div>
 
 ##Building:
@@ -159,41 +163,3 @@ See [Perf.md](https://github.com/sushihangover/Realm.Json.Extensions/blob/master
 ##License
 
 Consult [LICENSE](https://github.com/sushihangover/Realm.Json.Extensions/blob/master/LICENSE)
-
-<head>
-<style>
-.nuget-badge code {
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    background-color: #202020;
-    border: 4px solid silver;
-    border-radius: 5px;
-    box-shadow: 2px 2px 3px #6e6e6e;
-    color: #e2e2e2;
-    display: block;
-    font: 1.0em 'andale mono', 'lucida console', monospace;
-    line-height: 1.5em;
-    overflow: auto;
-    padding: 15px
-}
-.nuget-badge code::before {
-    content: "PM> "
-}
-.code {
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    background-color: #202020;
-    border: 4px solid silver;
-    border-radius: 5px;
-    box-shadow: 2px 2px 3px #6e6e6e;
-    color: #e2e2e2;
-    display: block;
-    font: 1.0em 'andale mono', 'lucida console', monospace;
-    line-height: 1.5em;
-    overflow: auto;
-    padding: 15px
-}
-
-</style>
-</head>
-
