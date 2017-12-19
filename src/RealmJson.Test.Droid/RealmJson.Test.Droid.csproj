@@ -3040,6 +3040,11 @@
 	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
 	<LLVMEnable>false</LLVMEnable>
 -->		
+<!--
+	<AotAssemblies>true</AotAssemblies>
+	<AndroidAotAdditionalArguments>no-write-symbols</AndroidAotAdditionalArguments>
+	<LLVMEnable>false</LLVMEnable>
+-->		
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'NugetTest|AnyCPU' ">
     <Optimize>false</Optimize>

@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ReleaseVersion>1.1.0</ReleaseVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Realm.Database" Version="2.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="RealmJson.Extensions" Version="2.1.0" />
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.91635" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="States.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="States.json" />
+  </ItemGroup>
+</Project>
