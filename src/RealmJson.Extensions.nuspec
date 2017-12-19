@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package>
   <metadata>
- 	<version>$version$</version>
+ 	<version>2.1.0</version>
     <id>RealmJson.Extensions</id>
     <title>SushiHangover.RealmJson.Extensions</title>
  	<description>Extension Methods for adding JSON APIs to a Realm Instance</description>
