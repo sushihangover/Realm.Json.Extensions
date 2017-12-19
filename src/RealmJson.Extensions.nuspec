@@ -19,10 +19,10 @@
  </dependencies>
   </metadata>
   <files>
-    <file src="RealmJson.Extensions/bin/Release/RealmJson.Extensions.dll" target="lib/netstandard1.0" />
-    <file src="RealmJson.Extensions/bin/Release/RealmJson.Extensions.dll" target="lib/MonoAndroid80" />
-    <file src="RealmJson.Extensions/bin/Release/RealmJson.Extensions.dll" target="lib/Xamarin.iOS10" />
-    <file src="RealmJson.Extensions/bin/Release/RealmJson.Extensions.dll" target="libXamarin.Mac20" />
-    <file src="RealmJson.Extensions/bin/Release/RealmJson.Extensions.dll" target="portable-net45+sl5+wp8+wpa81+win8+monoandroid+Xamarin.iOS10+monotouch+Xamarin.Mac" />
+    <file src="RealmJson.Extensions/bin/Release/RealmJson.Extensions.dll" target="lib\netstandard1.0" />
+    <file src="RealmJson.Extensions/bin/Release/RealmJson.Extensions.dll" target="lib\MonoAndroid80" />
+    <file src="RealmJson.Extensions/bin/Release/RealmJson.Extensions.dll" target="lib\Xamarin.iOS10" />
+    <file src="RealmJson.Extensions/bin/Release/RealmJson.Extensions.dll" target="lib\Xamarin.Mac20" />
+    <file src="RealmJson.Extensions/bin/Release/RealmJson.Extensions.dll" target="lib\portable-net45+sl5+wp8+wpa81+win8+monoandroid+Xamarin.iOS10+monotouch+Xamarin.Mac" />
   </files>
 </package>
