@@ -46,7 +46,6 @@ Post on [StackOverflow](http://stackoverflow.com/questions/tagged/xamarin+realm)
 
 * A RealmObject Instance:
  	* .NonManagedCopy\<T\>()
- 	* .NonManagedCopy()
 
 * A RealmResult Instance (IQueryable): 
 	* .NonManagedCopy<T>
@@ -57,7 +56,13 @@ Post on [StackOverflow](http://stackoverflow.com/questions/tagged/xamarin+realm)
 
 ## Usage / Examples:
 	
-### Single RealmObject from Json-based Strings:
+### Copy a managed object to a non-managed instacne:
+
+	var syncedObject = realmObject.NonManagedCopy<ARealmClass>();
+	
+Re:	[https://stackoverflow.com/a/46629763/4984832](https://stackoverflow.com/a/46629763/4984832)
+	
+### Single RealmObject from Json-based string:
 	
 	using (var theRealm = Realm.GetInstance(RealmDBTempPath()))
 	{
