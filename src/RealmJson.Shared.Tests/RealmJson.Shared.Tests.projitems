@@ -16,6 +16,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Model\StatesWithCities.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\StateUnique.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\State.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\BackLinks.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)49847277.Test.Shared.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Model\" />

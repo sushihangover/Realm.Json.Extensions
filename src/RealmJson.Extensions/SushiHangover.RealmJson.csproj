@@ -80,5 +80,5 @@
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\.nuget\NuGet.targets" Condition="Exists('..\.nuget\NuGet.targets')" />
   <Import Project="..\packages\Realm.Database.2.2.0\build\Realm.Database.targets" Condition="Exists('..\packages\Realm.Database.2.2.0\build\Realm.Database.targets')" />
-  <Import Project="..\packages\Fody.3.0.3\build\Fody.targets" Condition="Exists('..\packages\Fody.3.0.3\build\Fody.targets')" />
+  <Import Project="..\packages\Fody.2.5.0\build\Fody.targets" Condition="Exists('..\packages\Fody.2.5.0\build\Fody.targets')" />
 </Project>

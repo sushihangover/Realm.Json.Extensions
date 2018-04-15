@@ -3123,7 +3123,7 @@
 	<Target Name="RunTests" DependsOnTargets="_ValidateAndroidPackageProperties">
 	    <Exec Command="$(_AndroidPlatformToolsDirectory)adb $(AdbTarget) $(AdbOptions) shell am instrument -w $(_AndroidPackage)/app.tests.TestInstrumentation" />
 	</Target>
-	<Import Project="..\packages\Fody.3.0.3\build\Fody.targets" Condition="Exists('..\packages\Fody.3.0.3\build\Fody.targets')" />
 	<Import Project="..\packages\NETStandard.Library.2.0.2\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.2\build\netstandard2.0\NETStandard.Library.targets')" />
 	<Import Project="..\packages\Realm.Database.2.2.0\build\Realm.Database.targets" Condition="Exists('..\packages\Realm.Database.2.2.0\build\Realm.Database.targets')" />
+	<Import Project="..\packages\Fody.2.5.0\build\Fody.targets" Condition="Exists('..\packages\Fody.2.5.0\build\Fody.targets')" />
 </Project>
